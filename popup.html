@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Notifier</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .status {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .volume-control {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .volume-control label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .volume-slider {
+            width: 100%;
+        }
+        .test-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #0070f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .test-button:hover {
+            background: #0051b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🔔</div>
+        <h2>Claude Notifier</h2>
+        <div class="status">
+            Active and monitoring Claude responses
+        </div>
+        <div class="volume-control">
+            <label for="volume">Notification Volume: <span id="volume-value">80</span>%</label>
+            <input type="range" id="volume" class="volume-slider" min="0" max="100" value="80">
+            <button id="test-sound" class="test-button">Test Sound</button>
+        </div>
+        <p>You'll hear a notification sound when Claude finishes generating a response.</p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
